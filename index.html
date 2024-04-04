@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaat And Fitr Calculator</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    
+    <div class="main">
+        <nav>
+            <h2 class="nav-elem">Zakaat Calculator
+                
+            </h2>
+            <img id="menuIcon" src="menuIcon.png" alt="" >
+            <div class=" menu-elem "> 
+                <div class="menuContent">
+                <center><h3>Menu</h3></center>
+                <ul >
+                    <li><a href="index.html" >Zakaat Calculator</a></li>
+                    <li><a href="info.html" >Zakaat Principles</a></li>
+                    <li><a href="#" >Fitr Calculator</a></li>
+                    </ul>
+                </div>
+            </div>     
+        </nav>
+
+
+        <center class="hadees">
+    
+            <h3 style=" color: rgb(129, 117, 6)">Sahih Bukhari, Volume 2, Book 24, Number 486</h3>
+            <p style="padding-bottom: 0;">Narrated Abu Huraira:</p>
+<p>Allah's Apostle said, "Whoever is made wealthy by Allah and does not pay the Zakat of his wealth, then on the Day of Resurrection his wealth will be made like a bald-headed poisonous male snake with two black spots over the eyes. The snake will encircle his neck and bite his cheeks and say, 'I am your wealth, I am your treasure.' " Then the Prophet recited the holy verses:-- 'Let not those who withhold . . .' (to the end of the verse). (3.180). </p>
+        </center>
+
+        <div class="calculate-zakaat" style="margin: 2vw; border: 2px solid grey;">
+          <center><h2 style="background-color: #e6e2e2 ; padding: 2vw 0;">Calculate Zakaat</h2></center>
+
+            <div class="zakaat-elem">
+                <div class="head">
+                    <p>* Please enter todas's rate of 22 carat gold in your city to calculate ypur zakaat </p>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <h3>22 Carat Gold</h3>
+                    <p>Price/Grams</p>
+                    <input id="gold22" type="number" placeholder="Price/Grams"> 
+
+                </div>
+            </div>
+            <!-- on gold -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on Gold </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Wieght in Grams</p>
+                    <input id="gold-w" type="number" placeholder="Wieght in Grams">
+                    <p>Price/Grams</p>
+                    <input id="gold-p" type="number" placeholder="Price/Grams">
+                    <p>Estimated Value</p>
+                    <p id="gold-val">Rs. 0</p>
+                </div>
+            </div>
+            <!-- on stones -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on precious stones (2.5%) </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Calculate the net amount of those stones.</p>
+                    <p>Estimated Value </p>
+                    <input id="stone" type="number" placeholder="Estimated Value">
+                </div>
+            </div>
+            <!-- on silver -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on Silver </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Includes household silver utensils, artefacts, and jewellery.</p>
+                    <p>Wieght in Grams</p>
+                    <input id="silverW" type="number" placeholder="Wieght in Grams">
+                    <p>Price/Grams</p>
+                    <input id="silverP" type="number" placeholder="Price/Grams">
+                    <p>Estimated Value</p>
+                    <p id="silverVal">Rs. 0</p>
+                </div>
+            </div>
+
+            <!-- zakaat on cash  -->
+            <div class="zakaat-elem"> 
+                <div class="head">
+                    <h2>Zakaat on Cash in hand/bank (2.5%)</h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Cash in Hand</p>
+                    <input class="cash" type="number" placeholder="Actual Value">
+                    <p>Cash in saving account</p>
+                    <input class="cash" type="number" placeholder="Actual Value">
+                    <p>Cash in current account </p>
+                    <input class="cash" type="number" placeholder="Actual Value">
+                    <p>Cash in fixed deposit</p>
+                    <input class="cash" type="number" placeholder="Actual Value">
+                    <p>Estimated Value</p>
+                    <p id="cashVal">Rs. 0</p>
+                </div>
+            </div>
+
+            <!-- zakkat on land -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on land property(2.5%) </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Property held as an Investment / Business (Estimate the current Market Value)</p>
+                    <input id="landVal1" type="number" placeholder="Estimated Value">
+                    <p>Plots of land held for sale (Market value on Zakat Due Date)</p>
+                    <input id="landVal2" type="number" placeholder="Estimated Value">
+                    
+                </div>
+            </div>
+
+            <!-- on investment -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on investment in shares/ bonds/ mutual funds/ advances/ security deposits/ etc.</h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Loans Receivable from Friends and Relatives / Security Deposits / Advances</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+
+                    <p>Investment in Govt Bonds, PSU Bonds, Corporate Bonds</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    <p>Insurance Premiums paid including bonus up to date</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    <p>Value of Shares/Bonds/Mutual Funds. Take the market value on Zakat Due Date</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    <p>Government Security Deposits, ADRs, etc</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    <p>Investment in Private Chits, Funds, etc</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    <p>Postal Savings/Deposits</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    <p>Other Sources of Wealth</p>
+                    <input class="invest1" type="number" placeholder="Estimated Value">
+                    
+                    
+                </div>
+            </div>
+
+            <!-- on business -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on business(2.5%) </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Value of Saleable Stock</p>
+                    <input class="busiAdd" type="number" placeholder="Estimated Value">
+                    
+                    <p>Value of Damaged/Dead Stock</p>
+                    <input class="busiAdd" type="number" placeholder="Estimated Value">
+                    
+                    <p>Amount Receivable from Credit Sales</p>
+                    <input class="busiAdd" type="number" placeholder="Estimated Value">
+                    
+                    <p>Amount Payable to Suppliers (Credit taken from suppliers for stocking goods)</p>
+                    <input class="busiSub" type="number" placeholder="Estimated Value">
+                    
+                    <p>Bad debts. </p>
+                    <input class="busiSub" type="number" placeholder="Estimated Value">
+                    
+                    <p>Total value of stocks</p>
+                    <p class="printBusi">Rs. 0 </p>
+                    
+                </div>
+            </div>
+
+            <!-- share in patnership firms -->
+            <!-- <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on share in patnership firms(2.5%) </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Capital, Reserves and Surplus as per last balance Sheet (your share)</p>
+                    <input id="silver-w" type="number" placeholder="Estimated Value">
+                    
+                    <p>Your Loan to the Firm as on Zakat Due Date</p>
+                    <input id="silver-w" type="number" placeholder="Estimated Value">
+                    
+                    <p>LESS: Withdrawals made by you during the current year</p>
+                    <input id="silver-w" type="number" placeholder="Estimated Value">
+                    
+                    <p>Accumulated Profit from the date of Balance Sheet to this Date (Estimate the Profit Value as it is difficult to get exact figures in the middle of Accounting Year)</p>
+                    <input id="silver-w" type="number" placeholder="Estimated Value">
+                    
+                    
+                    <p>NET TOTAL WORTH CALCULATED</p>
+                    <p>Rs. 0 </p>
+                    
+                </div>
+            </div> -->
+
+            <!-- on agri goods -->
+            <!-- <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on agricultural produce(10%, 7.5%, 5%) </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Produce Dependent on Rain Water - @ 10% of product (crop) in Value or Kind</p>
+                    <input class="agriProd" type="number" placeholder="Estimated Value">
+                    
+                    <p>Produce totally dependent on Artificial Irrigation like Canal, Tank, Borewell, etc. @ 5% of Produce (crop) in Value or in Kind</p>
+                    <input class="agriProd" type="number" placeholder="Estimated Value">
+                    
+                    <p>Produce dependent Partially on Rain Water and Partially on Artificial Irrigation @ 7.5% of the produce Value or in Kind</p>
+                    <input class="agriProd" type="number" placeholder="Estimated Value">
+                    
+                    <p>Total value of produce</p>
+                    <p class="printAgri">Rs. 0 </p>
+                    
+                </div>
+            </div> -->
+            <!-- on animals -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>Zakaat on animals(sheeps, goats, cows, buffaloes & camels) </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>Sheep, lamb, goat (40-120: 1 animal, 121-200: 2 animals, 201-300: 3 animals)</p>
+                    <input class="animalVal" type="number"  placeholder="Estimated Value">
+                    
+                    <p>Cows & Buffaloes (30-39: 1 calf of 1 year, 40-59: 1 animal of min. 2 years, 60-69: 2 calves of 1 year)</p>
+                    <input class="animalVal" type="number" placeholder="Estimated Value">
+                    
+                    
+                </div>
+            </div>
+
+            <!-- deduction -->
+            <div class="zakaat-elem">
+                <div class="head">
+                    <h2>DEDUCTION - You need to deduct your liabilities. Usage of the loan should have been on zakaatable wealth only </h2>
+                   <span > <button class="show">+</button>
+                    <button class="hide">-</button></span>
+                </div>
+                <div class="zakaat-ques">
+                    <p>loan taken from Friends / relative</p>
+                    <input class="deductElem" type="number" placeholder="Estimated Value">
+                    
+                    <p>loans taken from bank / institutions(loans taken for residential property only.)</p>
+                    <input class="deductElem" type="number" placeholder="Estimated Value">
+                    
+                    <p>zakaat paid in advance during the year</p>
+                    <input class="deductElem" type="number" placeholder="Estimated Value">
+                    
+                    <p>Total deduction</p>
+                    <p class="printDeduct">Rs. 0 </p>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        
+
+        <div class="result" style="margin: 2vw; border: 2px solid grey;">
+            <center><h2 style="background-color: #e6e2e2 ; padding: 2vw 0;">Zakaat Payable</h2></center>
+            <div class="result-form">
+                <P>If you are not able to decide , in which section to place your money. then please consult a mufti</P>
+            <p>Total Estimated Wealth</p>
+            <input type="text" name="" id="total-wealth">
+            <p>-</p>
+            <p>Total Liabilities</p>
+            <input type="text" id="total-liability">
+            <p>=</p>
+            <p>Total Zakaatable Wealth</p>
+            <p class="TotalZakatableWealth" style="color: red;"> Rs 0</p>
+            <p>Total Zakaat Payable</p>
+            <p class="TotalZakat" style="color: red;">Rs 0</p>
+            
+            <button id="submit" style="padding: 1vw; font-size: 2vw; border-radius:10px; font-weight: 500;">GENERATE</button>
+            </div>
+
+        </div>
+
+        <div class="info" style="margin: 4vw;">
+            <h2 style="color: red; text-align: center; font-size: 4vw; background-color: #e6e2e2;" >Note: Please read this information for more details</h2>
+
+            <div class="info-elem">
+                <label for="q1"  >Zakat Due Date</label>
+                <input type="radio" name="questions" id="q1" checked>
+                <p >As a first step towards ascertaining Zakat liability, please determine your Zakat Due Date. It can be 1st Ramzan, 21st Ramzan, 1st Moharrum or any other convenient date of lunar calendar. Once fixed, it remains same year after year. Every year Zakat becomes due on your Zakatable-Wealth on the particular Zakat Due Date.</p>
+            </div>
+
+            <div class="info-elem">
+                <label for="q2" >Zakat on Gold and Silver</label>
+                <input type="radio" name="questions" id="q2">
+                <p>Zakat on gold should be calculated at 2.5% of the market value as on Zakat Due Date. Zakat is to be paid on silver in pure form or jewellery, utensils, decorative items and all household items including crockery, cutlery made of silver at 2.5% of the prevailing market rates.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q3" >Zakat on Cash and Bank Balances</label>
+                <input type="radio" name="questions" id="q3">
+                <p>Zakat should be paid at 2.5% on all cash balance and bank balances in your savings bank account, current a/c or FD account on Zakat Due Date.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q4" >Zakat on Loans & Advances given</label>
+                <input type="radio" name="questions" id="q4">
+                <p>Zakat is payable by you on loans you have given to your friends and relatives. If your loan/advance is doubtful or bad, you may not calculate it as your wealth. You can add it to your wealth on receipt of this loan/advance.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q5" >Zakat on Investment in Govt. Instruments</label>
+                <input type="radio" name="questions" id="q5">
+                <p>Zakat is payable on Govt Bonds, Public Sector Bonds, Pvt Sector Bonds, Insurance policies, voluntary contribution to Provident Fund, Gratuity amount received, PF Settlement, Commutation of pension received etc.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q6" >Zakat on Landed Property</label>
+                <input type="radio" name="questions" id="q6">
+                <p>Zakat is not payable on personal residential house even if you have more than one and meant for residential purposes only. However, Zakat is payable on the rental income itself after deducting the maintenance and other expenses.
+
+                    If your intention of holding properties is to sell at a future date, or as an investment, then Zakat is payable on the Market Value of the property. Also, if your intention of holding properties changes in the current year, i.e. from self-use to business then you need to pay Zakat on that Property Value.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q7" >Zakat on Business</label>
+                <input type="radio" name="questions" id="q7">
+                <p>If you are a businessman, trader, merchant or industrialist, please undertake valuation of all your inventory - raw materials, finished goods on Zakat Due Date. The stock of raw materials must be valued at its landed cost price and stock of finished goods should be valued at market sales price. If you have any bills receivable (sales given on credit) then you need to add the same towards calculations.
+
+Similarly, deduct the amounts due to your suppliers and deduct the loans on stock on the date of calculation. Dead Stock should be calculated on scrap value or its saleable value. Damaged stocks should also be valued at its scrap value.
+                    
+There is no Zakat on factory buildings, plant & machinery, equipment, furniture and fixtures used in the business. However, Zakat is applicable on products produced in the factory (i.e. finished goods value).</p>
+            </div>
+            <div class="info-elem">
+                <label for="q8" >Zakat on Partnership Firms</label>
+                <input type="radio" name="questions" id="q8">
+                <p>Zakat can be paid either by the firm or separately by each partner. If the firm is not paying, and the partner wants to calculate his share, he should take the amount standing to his capital and loan account as per the last balance sheet. Add his estimated share of profit till Zakat Due Date.
+
+                    This can only be estimated as it is difficult to calculate the exact profit or loss between an accounting year.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q1" >Zakat on Agricultural Products</label>
+                <input type="radio" name="questions" id="q1">
+                <p>Zakat is payable on all agricultural produce including fruits, commercially grown flowers, vegetables, and all types of grains at the harvest time itself. The passing of One year does not apply for agricultural produce.
+
+                    If there are two or more crops on the same land per year, then Zakat has to be paid as many times on the crop, irrespective of the no of times.
+                    
+                    The formula for Zakat calculation on agriculture is as follows:
+                    
+                    On crops dependent purely on rain water it will be 10% of produce, On crops not irrigated through rain water but use Canal Water, Tank Water, Borewell and Open wells, the Zakat is 5% of the produce. For Crops dependent partly on Rain Water and partly on other water, the Zakat applicable would be 7.5% of produce.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q9" >Zakat on Animals</label>
+                <input type="radio" name="questions" id="q9">
+                <p>Zakat is payable on all grazing animals, like goats, sheep, camel, cows and buffaloes.
+
+                    Zakat on animals is payable every year, provided that the stock exceeds the threshold of Zakat. Also, such animals should be of the type that grazes naturally. In the case of sheep and goats, the minimum threshold is 40, when one sheep is due. Two sheep become due for 121, and three sheep for 201. Thereafter, one extra sheep is added for each 100.
+                    
+                    With cows & buffaloes, the minimum threshold is 30, and the rate is one male or female aged one year. If the cows are 40, then one two-year old female cow is due. For 60 cows, two cows of one year of age. With 70, two cows, one of them one year old and the other two years. For 80 cows, the rate is two female cows of two years each. Then we move up 10 at a time, increasing the liability pro rata.
+                    
+                    In camels the threshold is five camels when the rate is one sheep of more than one year of age. For ten camels two sheep, and the rate goes up at each stage of five extra camels.
+                    
+                    For 25 camels the rate is a she-camel of one year of age, or a male camel who has passed two years of age. For 36 camels a she-camel of 2 years, and for 46, one over 3 years.
+                    
+                    As for dairies and fisheries, they should be treated as commercial ventures, and the same that applies to business applies to them.</p>
+            </div>
+            <div class="info-elem">
+                <label for="q10" >Liabilities Deductions</label>
+                <input type="radio" name="questions" id="q10">
+                <p>If you have taken any loans from any person or institution, and if you have not already deducted the same from any of the above sections, then you can deduct your payables over here. Please be truthful, as Zakat is a sure way of protecting ones wealth if Zakat has been paid on it regularly and fully.
+
+                    Loans taken only for Zakatable-Wealth should be deducted. Cars, Houses, etc are not Zakatable wealth. So any loan taken for these purposes are not to be deducted.</p>
+            </div>
+
+        </div>
+
+
+        <div class="note" style="border: 1px solid; background-color: red; color: white; margin: 2vw; padding:2vw; font-size: 1.5rem;">
+            <p>Important: If you any doubt or any querry please contact your nearest Imam / Mufti.</p>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>

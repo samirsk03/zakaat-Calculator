@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaat Principles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main{
+            margin: 2rem;
+        }
+
+        .info-elem .p{
+    margin-top: 3vw;
+    max-height: 0;
+    overflow: hidden;
+}
+
+
+.info-elem label + input[type="radio"]{
+    display: none;
+}
+
+.info-elem label + input[type="radio"]:checked + .p {
+    max-height: fit-content;
+}
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="info-elem">
+        <label for="q1"  >Zakat Due Date</label>
+        <input type="radio" name="questions" id="q1" checked>
+        <div class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ad tenetur, repellat mollitia quia maiores, excepturi quod doloremque repudiandae aliquam, exercitationem ratione.
+            <ol><li>keol</li></ol>
+        </div>
+</div>
+
+<div class="info-elem">
+    <label for="q2"  >Zakat Due Date</label>
+    <input type="radio" name="questions" id="q2" >
+    <div class="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui ipsum animi, vero dolore excepturi rem rerum est dolor ullam quam laborum?
+        <ol>
+            <li>asd</li>
+            <li>asd</li>
+            <li>asd</li>
+        </ol>
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
